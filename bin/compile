@@ -87,8 +87,8 @@ if [ -f $BUILD_DIR/texlive.packages ]; then
     tlmgr install $(cat $BUILD_DIR/texlive.packages)
 fi
 
-build-step "upgrading installed packages"
-tlmgr update --all
+build-step "not upgrading installed packages"
+
 
 build-step "cleanup"
 rm -rf $TEXLIVE_HOME/texmf-dist/doc
