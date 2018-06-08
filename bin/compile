@@ -88,6 +88,7 @@ if [ -f $BUILD_DIR/texlive.packages ]; then
     tlmgr install $(cat $BUILD_DIR/texlive.packages)
 fi
 
+#-tlmgr update --all
 build-step "not upgrading installed packages"
 
 
